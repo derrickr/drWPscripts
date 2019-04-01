@@ -3,6 +3,13 @@
 #	Get wp-config values: $WP_path, $WP_conf, $WP_db, $WP_user, $WP_pass, $redisPw
 	source ~/drWPscripts/getWPconfig.sh
 
+#	Check if /archive directory exists
+if [ ! -d /archive ] ; then
+
+#	Create dir for scripts
+	mkdir /archive
+fi
+
 #	Change dir
 	cd /archive
 
