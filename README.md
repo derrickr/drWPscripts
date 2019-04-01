@@ -20,12 +20,11 @@ wget -O drWPscriptsInstall.sh https://github.com/derrickr/drWPscripts/blob/maste
   
 Usage:
   
-1. source showWPconfig.sh  
-   This will display the current WP instance config variables required for backup/restore.
+1. Display the current WP instance config variables required for backup/restore:  
+   source showWPconfig.sh  
+     
+2. Dialog box showing the available backups to restore from:  
+   source drWPrecovery.sh  
   
-2. source drWPrecovery.sh  
-   This will open a dialog box showing the available backups to restore from.
-  
-3. source drWPimport.sh  
-   This will import a backup pair (.tgz & .sql files) into your target domain.
-   Ensure you upload your source backup pair before execution.
+3. Import your uploaded backup pair (.tgz & .sql files) into your target domain:  
+   source drWPimport.sh  
