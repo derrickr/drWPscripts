@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#	Get wp-config values: $WP_path, $WP_conf, $WP_db, $WP_user, $WP_pass, $redisPw
+	source ~/drWPscripts/getWPconfig.sh
+
+#	Change dir
+	cd /archive
+
+#	Dump WP db into archive dir
+	mysqldump -u $WP_user -p$WP_pass $WP_db > /archive/$dateHost.sql 2>/dev/null
+
+#	Archive WP files into archive dir
+	tar czf /archive/$dateHost.tgz $WP_path 2>/dev/null
+
+#	Remove versions older than 10 days
+	find . -maxdepth 1 -type f -mtime +10 -exec rm "{}" \;
