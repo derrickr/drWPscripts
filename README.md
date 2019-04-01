@@ -15,4 +15,4 @@ drWPimport.sh - Provides an import capability to import WP from one server to an
   
 Usage:  
   
-  wget https://github.com/derrickr/drWPscripts/blob/master/drWPscriptsInstall.sh && drWPscriptsInstall.sh
+wget -O drWPscriptsInstall.sh https://github.com/derrickr/drWPscripts/blob/master/drWPscriptsInstall.sh?raw=true && source drWPscriptsInstall.sh
