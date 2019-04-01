@@ -8,7 +8,7 @@ if [ ! -d ~/drWPscripts/archive ] ; then
 fi
 
 #	Tar current drWpscripts contents into archive
-	tar czf ~/drWPscripts/archive/drWPscripts-$(date +%Y%m%d%H%M%S).tgz ~/drWPscripts 2>/dev/null
+	tar --exclude='~/drWPscripts/archive' -czf ~/drWPscripts/archive/drWPscripts-$(date +%Y%m%d%H%M%S).tgz ~/drWPscripts/*.* 2>/dev/null
 
 #	Clean up target
 	rm -rf ~/drWPscripts/*.*
