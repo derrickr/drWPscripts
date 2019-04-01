@@ -1,20 +1,20 @@
 # drWPscripts
 A bunch of bash scripts to backup WP
 #
-drWPscriptsInstall.sh
+drWPscriptsInstall.sh - 
 Installation script to download and configure the following:
 #
-getWPconfig.sh
+getWPconfig.sh - 
 Gets the configuration variables from the installed WP instance of wp-config.php
 #
-showWPconfig.sh
+showWPconfig.sh - 
 Shows the required wp-config.php settings
 #
-drWPbup.sh
+drWPbup.sh - 
 This is moved into /etc/cron.daily to automate the daily backUp, on a rolling 10 day basis
 #
-recovery.sh
+recovery.sh - 
 Enables recovery from the automated backUps (above)
 #
-drWPimport.sh
+drWPimport.sh - 
 Provides an import capability to import WP from one server to another
