@@ -11,21 +11,21 @@ fi
 	tar czf ~/drWPscripts/archive/drWPscripts-$(date +%Y%m%d%H%M%S).tgz ~/drWPscripts 2>/dev/null
 
 #	Clean up target
-	rm -rf ~/drWPscripts/
+	rm -rf ~/drWPscripts/*.*
 	
 #	change dir
 	cd ~/drWPscripts/
 
 #	wget the drWPscripts from github
 #	wget https://github.com/derrickr/drWPscripts/archive/master.zip
-	wget https://github.com/derrickr/drWPscripts/blob/master/getWPconfig.sh
-	wget https://github.com/derrickr/drWPscripts/blob/master/showWPconfig.sh
-	wget https://github.com/derrickr/drWPscripts/blob/master/drWPbup
-	wget https://github.com/derrickr/drWPscripts/blob/master/drWPrecovery.sh
-	wget https://github.com/derrickr/drWPscripts/blob/master/drWPimport.sh
+	wget -O getWPconfig.sh https://github.com/derrickr/drWPscripts/blob/master/getWPconfig.sh?raw=true
+	wget -O showWPconfig.sh https://github.com/derrickr/drWPscripts/blob/master/showWPconfig.sh?raw=true
+	wget -O drWPbup https://github.com/derrickr/drWPscripts/blob/master/drWPbup?raw=true
+	wget -O drWPrecovery.sh https://github.com/derrickr/drWPscripts/blob/master/drWPrecovery.sh?raw=true
+	wget -O drWPimport.sh https://github.com/derrickr/drWPscripts/blob/master/drWPimport.sh?raw=true
 
 #	Make them all exectuable
-	chmod 500 ~/drWPscripts/
+	chmod 500 ~/drWPscripts/*
 
 #	Move backup script into daily cron
-	mv ~/drWPscripts/bup /etc/cron.daily/bup
+	mv ~/drWPscripts/drWPbup /etc/cron.daily/drWPbup
