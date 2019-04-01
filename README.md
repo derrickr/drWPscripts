@@ -1,6 +1,9 @@
 # drWPscripts
 A bunch of bash scripts to backup WP
 #
+drWPscriptsInstall.sh
+Installation script to download and configure the following:
+#
 getWPconfig.sh
 Gets the configuration variables from the installed WP instance of wp-config.php
 #
