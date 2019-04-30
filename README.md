@@ -1,6 +1,6 @@
 **_drWPscripts_**
 
-A bunch of bash scripts to backup, recover and import WP  
+A bunch of bash scripts to backup, recover and import a single instance of WP  
   
 getWPconfig.sh - Gets the configuration variables from the installed WP instance of wp-config.php  
   
