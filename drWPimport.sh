@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#	Intended to import a WordPress instance from one server to another e.g. Production -> Development
+#
+#	This script imports another WordPress instance (archived sourceFiles.tgz and database)
+#	from another server into the target server.
+#
+#	It is assumed that a current WordPress instance is already installed on the target server and
+#	will be dateTime renamed and its wp-config copied into the new instance
+
 #	Get wp-config values: $WP_path, $WP_conf, $WP_db, $WP_user, $WP_pass, $redisPw
 	source ~/drWPscripts/getWPconfig.sh
 
@@ -80,7 +88,7 @@ fi
 #	Import source db into target
 	mysql -u $WP_user -p$WP_pass $WP_db < wip.sql 2>/dev/null
 
-#	Remove cache nginx cache contents
+#	Remove nginx cache contents
 	rm -rf /var/www/cache/*
 
 #	Flush redis cache
