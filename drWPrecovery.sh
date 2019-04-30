@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#	set char set for dialog box
-	export NCURSES_NO_UTF8_ACS=1
-
 #	Get wp-config values: $WP_path, $WP_conf, $WP_db, $WP_user, $WP_pass, $redisPw
 	source ~/drWPscripts/getWPconfig.sh
 
